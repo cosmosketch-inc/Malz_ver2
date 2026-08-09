@@ -63,7 +63,7 @@ document.querySelectorAll('[data-contact-form]').forEach(form=>form.addEventList
   const invalid=required.some(field=>field.type==='checkbox'?!field.checked:!field.value.trim());
   if(invalid){status.textContent='必須項目をご確認ください。';status.style.display='block';return;}
   const data=new FormData(form);
-  const subject=`【Malz Insight】Waitlist登録 - ${data.get('company')}`;
+  const subject=`【Malz Insight】先行登録 - ${data.get('company')}`;
   const body=[`会社名：${data.get('company')}`,`お名前：${data.get('name')}`,`メール：${data.get('email')}`,`お立場：${data.get('topic')||''}`,`関心テーマ・補足：${data.get('message')||''}`].join('\n');
   status.textContent='メール作成画面を開きます。内容をご確認のうえ送信してください。';
   status.style.display='block';

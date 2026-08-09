@@ -47,3 +47,11 @@ This site extends the visual language of `malz.io` across Malz Ads and Malz Insi
 - Form labels remain above controls; required consent is validated
 - Audience selection exposes `aria-current="location"` and updates as the reader moves between sections
 - Compact controls keep a minimum 44px target on mobile
+
+## Japanese copy
+
+- Explain the service with concrete nouns and actions: advertise, choose stores, answer a survey, confirm purchase reasons
+- Avoid slogan-like contrasts, abstract claims, and translated marketing phrases
+- Use Japanese labels unless an English term is part of the product name
+- Keep one idea per sentence and split long modifiers into separate sentences
+- Do not invent performance claims, customer outcomes, or supporting numbers
