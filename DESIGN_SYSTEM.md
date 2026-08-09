@@ -7,7 +7,7 @@ This site extends the visual language of `malz.io` across Malz Ads and Malz Insi
 - Brand gradient: `#3180B8` → `#5B6FB6` → `#9856B4`
 - Ink: `#111111`
 - Body: `#454C5E`
-- Muted and dividers: `#959AAE`, `#D0D5E8`
+- Muted text and dividers: `#6F7587`, `#D0D5E8`
 - Surfaces: `#F9FBFD`, `#E9EEF3`, `#E5E5FF`
 - Type: Apple system UI stack where available, with Helvetica Neue and Japanese system fallbacks
 - Content widths: 1280px page container, 740px reading measure
@@ -22,7 +22,7 @@ This site extends the visual language of `malz.io` across Malz Ads and Malz Insi
 - Section title: purple English label plus bold Japanese display type
 - Audience navigation: sticky segmented control with equal-width options, 44px minimum mobile target, and a raised selected state that is distinguishable without color alone
 - Feature row: oversized gradient number, copy, and real image
-- Cards: reserved for audience or use-case grouping; no decorative elevation
+- Cards: reserved for audience or use-case grouping; no decorative elevation; light cards set their foreground color explicitly so they remain legible inside dark sections
 - CTA: one consistent action label per intent
 
 ## Motion
@@ -37,6 +37,7 @@ This site extends the visual language of `malz.io` across Malz Ads and Malz Insi
 - Media containers reserve their aspect ratio to prevent layout shift
 - `object-fit: cover` is paired with image-specific focal positions so people and products remain visible
 - Hero media uses 4:3 on compact screens and avoids fixed pixel heights
+- Use-case media uses a consistent 16:10 crop and WebP compression, with descriptive alternative text and lazy loading
 - Decorative labels never cover important image content
 
 ## Accessibility
