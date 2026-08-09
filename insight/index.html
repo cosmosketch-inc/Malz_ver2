@@ -21,7 +21,7 @@
   <section class="page-hero insight-hero">
     <div class="shell page-hero-grid">
       <div><span class="page-hero-note">MALZ INSIGHT / PRE-LAUNCH</span><h1>買った人の「なぜ」を、<br><span class="gradient-text">買った場所で知る。</span></h1><p class="lead">アンケートとリワードを通じ、購買データだけでは見えない認知・比較・購入理由を、買い物の記憶が新しいうちに集めます。</p><a class="button button-gradient" href="#waitlist">Waitlistに登録</a></div>
-      <figure class="page-hero-media"><img src="../assets/insight-survey.webp" alt="買い物後にスマートフォンでアンケートへ回答する生活者" width="1400" height="1050"></figure>
+      <figure class="page-hero-media media-survey"><img src="../assets/insight-survey.webp" alt="買い物後にスマートフォンでアンケートへ回答する生活者" width="1400" height="1050"></figure>
     </div>
   </section>
 
@@ -42,8 +42,6 @@
     </div>
   </section>
 
-  <nav class="audience-tabs shell" aria-label="対象者別メニュー"><a href="#maker">メーカー</a><a href="#agency">広告代理店</a></nav>
-
   <section class="section section-white audience-section" id="maker">
     <div class="shell">
       <div class="audience-heading reveal"><h2 class="display-lg">商品づくりと施策に、<br><span class="gradient-text">店頭の声を。</span></h2><p>メーカーの商品開発、ブランド、営業、ショッパーマーケティングなど、複数部門の意思決定に活用できます。</p></div>
@@ -56,17 +54,6 @@
     </div>
   </section>
 
-  <section class="section section-gradient audience-section" id="agency">
-    <div class="shell">
-      <div class="audience-heading reveal"><h2 class="display-lg">施策の結果に、<br>生活者の理由を。</h2><p>広告・店頭施策へ生活者調査を組み込み、実施報告だけで終わらない評価と、次の提案につながる示唆をつくります。</p></div>
-      <div class="benefit-grid">
-        <article class="benefit reveal"><small class="benefit-number">DESIGN</small><h3>施策の目的から<br>調査を設計</h3><p>KPIから、生活者が短く答えられる設問へ落とし込みます。</p></article>
-        <article class="benefit reveal"><small class="benefit-number">LISTEN</small><h3>買い物に近い場所で<br>声を集める</h3><p>店頭や購買後の文脈に合わせて回答を収集します。</p></article>
-        <article class="benefit reveal"><small class="benefit-number">LEARN</small><h3>次の提案へ<br>示唆をつなげる</h3><p>認知、印象、選択理由を整理し、次回施策へつなげます。</p></article>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-dark" id="waitlist">
     <div class="shell waitlist-grid">
       <div class="reveal"><span class="section-label">WAITLIST</span><h2 class="display-lg">先行案内を、<br>受け取る。</h2><p class="lead">Malz Insightは正式提供前です。提供開始のお知らせ、先行ヒアリング、PoC募集などをご案内します。登録だけで契約や費用は発生しません。</p></div>
@@ -74,7 +61,7 @@
         <div class="field"><label for="company">会社名 *</label><input id="company" name="company" required autocomplete="organization"></div>
         <div class="field"><label for="name">お名前 *</label><input id="name" name="name" required autocomplete="name"></div>
         <div class="field full"><label for="email">会社メールアドレス *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-        <div class="field full"><label for="topic">お立場</label><select id="topic" name="topic"><option>メーカー</option><option>広告代理店</option></select></div>
+        <input type="hidden" name="topic" value="メーカー">
         <div class="field full"><label for="message">関心のあるテーマ・補足</label><textarea id="message" name="message"></textarea></div>
         <label class="consent"><input type="checkbox" name="privacy" required> <span><a href="https://p2gm.com/privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します。</span></label>
         <p class="form-note">登録するとメール作成画面が開きます。内容をご確認のうえ送信してください。</p>

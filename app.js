@@ -13,6 +13,14 @@ if(menuButton&&navigation){
     menuButton.setAttribute('aria-expanded','false');
     document.body.classList.remove('menu-open');
   }));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&navigation.classList.contains('open')){
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded','false');
+      document.body.classList.remove('menu-open');
+      menuButton.focus();
+    }
+  });
 }
 
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -28,10 +36,21 @@ if(reduceMotion||!('IntersectionObserver' in window)){
 
 const tabLinks=[...document.querySelectorAll('.audience-tabs a')];
 const tabTargets=tabLinks.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+const selectTab=targetId=>tabLinks.forEach(link=>{
+  const selected=link.getAttribute('href')===`#${targetId}`;
+  link.classList.toggle('active',selected);
+  if(selected){link.setAttribute('aria-current','location');}
+  else{link.removeAttribute('aria-current');}
+});
+if(tabLinks.length&&tabTargets.length){
+  const initialTarget=location.hash&&document.querySelector(location.hash)?location.hash.slice(1):tabTargets[0].id;
+  selectTab(initialTarget);
+  tabLinks.forEach(link=>link.addEventListener('click',()=>selectTab(link.getAttribute('href').slice(1))));
+}
 if(tabLinks.length&&tabTargets.length&&'IntersectionObserver' in window){
   const tabObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
     if(entry.isIntersecting){
-      tabLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${entry.target.id}`));
+      selectTab(entry.target.id);
     }
   }),{rootMargin:'-25% 0px -60% 0px'});
   tabTargets.forEach(section=>tabObserver.observe(section));
