@@ -107,7 +107,7 @@
       const f=new FormData(form);
       const subject='【Malz Insight】先行案内登録 - '+f.get('company');
       const body=['Malz Insight 先行案内登録','',`会社名：${f.get('company')}`,`お名前：${f.get('name')}`,`メール：${f.get('email')}`,`部署名：${f.get('department')||''}`,`関心テーマ：${f.get('interest')||''}`,`補足：${f.get('note')||''}`].join('\n');
-      window.location.href='mailto:info@p2gm.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      window.location.href='mailto:ttakino@cosmosketch.co.jp?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
       document.getElementById('success').style.display='block';
     });
   </script>
